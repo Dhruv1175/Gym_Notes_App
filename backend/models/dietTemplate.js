@@ -22,4 +22,4 @@ const dietTemplateSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 const DietTemplate = mongoose.model("DietTemplate", dietTemplateSchema);
-export default DietTemplate;
+export default DietTemplate; 

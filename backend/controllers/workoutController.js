@@ -1,4 +1,4 @@
-import Workout from "../models/Workout.js";
+import Workout from "../models/workoutModel.js";
 import WorkoutTemplate from "../models/workoutTemplate.js";
 
 export const addWorkout = async (req, res) => {
