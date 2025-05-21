@@ -7,7 +7,6 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import workoutRoutes from "./routes/workoutRoutes.js";
 import dietRoutes from "./routes/dietRoutes.js";
-import aiRoutes from "./routes/aiRoutes.js";
 import notificationRoutes from "./routes/notificationRoutes.js";
 import socialRoutes from "./routes/socialRoutes.js";
 import waterRoutes from "./routes/utilityRoutes.js";
@@ -28,7 +27,6 @@ app.use(cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/workouts", workoutRoutes);
 app.use("/api/diets", dietRoutes);
-app.use("/api/ai", aiRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/social", socialRoutes);
 app.use("/api/water", waterRoutes);           // 💧 Water Intake Tracker

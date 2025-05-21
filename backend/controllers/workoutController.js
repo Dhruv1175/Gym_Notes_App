@@ -2,11 +2,12 @@ import Workout from "../models/workoutModel.js";
 import WorkoutTemplate from "../models/workoutTemplate.js";
 
 export const addWorkout = async (req, res) => {
-  const { date, exercises, notes } = req.body;
+  const { date, split , exercises, notes } = req.body;
   try {
     const workout = await Workout.create({
       user: req.user._id,
       date: date || new Date(),
+      split,
       exercises,
       notes,
     });
@@ -27,11 +28,11 @@ export const getWorkouts = async (req, res) => {
 
 export const updateWorkout = async (req, res) => {
   const { id } = req.params;
-  const { exercises, notes, date } = req.body;
+  const { split , exercises, notes, date } = req.body;
   try {
     const updated = await Workout.findOneAndUpdate(
       { _id: id, user: req.user._id },
-      { exercises, notes, date },
+      { split , exercises, notes, date },
       { new: true }
     );
     res.status(200).json({ message: "Workout updated", workout: updated });
